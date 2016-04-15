@@ -30,7 +30,7 @@ $screenWidth: 100%;
 	$height： 100px;
 ```
 
-- 设置变量 `!defualt`
+- 设置变量缺省值 `!defualt`
 
 
 
