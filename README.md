@@ -30,7 +30,11 @@ $screenWidth: 100%;
 	$height： 100px;
 ```
 
-- 设置变量缺省值 `!defualt`
+- 设置变量缺省值，并其赋值末尾添加空格和`!defualt`
+
+```sass
+$content : 'hello world' !defualt;
+```
 
 
 
@@ -109,9 +113,37 @@ p.#{$navsSelector}
 - \#{}属性值
 
 ```sass
-.detial
+.detail
 	$font-size: 18px;
 	$line-height: 40px;
-	font: #{font-size}/#{$line-height};
+	font: #{$font-size}/#{$line-height};
 ```
+
+### 规则和指令
+
+#### @import
+
+##能够引入sass/scss文件，并合并文件输出单一css文件；会当前目录寻找相关文件。##
+
+引入文件规则如下：
+
+- 文件名为.css文件
+- 文件名以http://开头
+- 文件名为url()
+- @import包含@media媒体查询
+
+例如：
+
+```sass
+@import "main" //同等于@import "main.sass"
+
+@import "main" screen;
+@import "http://www.helloworld.com/main";
+@import url(main);
+```
+
+#####嵌套@import
+
+同样可以嵌套样式和媒体查询中，例如：
+
 
