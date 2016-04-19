@@ -146,4 +146,10 @@ p.#{$navsSelector}
 
 同样可以嵌套样式和媒体查询中，例如：
 
+```sass
+.content {
+	@import "main"
+}
+```
+
 
