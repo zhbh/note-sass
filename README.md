@@ -36,8 +36,6 @@ $screenWidth: 100%;
 $content : 'hello world' !defualt;
 ```
 
-
-
 ### 运算
 
 支持基本运算（+、-、×、/、%），同样可以不同单位进行运算。
@@ -147,9 +145,54 @@ p.#{$navsSelector}
 同样可以嵌套样式和媒体查询中，例如：
 
 ```sass
-.content {
+.content 
 	@import "main"
+```
+
+则编译成
+
+```sass
+.content .main {
+  color: #fff;
 }
 ```
 
+```sass
+//@media
+.divFather 
+	font-size: 16px;
+	@media (max-width:320)
+		font-size: 14px;
+```
 
+则编译成
+
+```sass
+.divFather 
+  font-size: 16px;
+
+@media (max-width: 320) 
+  .divFather 
+    font-size: 14px;
+```
+
+#### @extend
+
+可以继承样式属性，多继承和链式继承。
+
+```sass
+.divFather 
+	height: 10px;
+
+.divMother
+	width: 30px;
+
+.divSon 
+	@extend .divFather;
+	width: 10px;
+
+//多继承、链式继承
+.divGrandSon
+	@extend .divMother;
+	@extend .divSon;
+```
