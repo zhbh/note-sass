@@ -1,0 +1,12 @@
+{
+  "name": "test-sass",
+  "version": "1.0.0",
+  "description": "test-sass",
+  "license": "",
+  "repository": {},
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}

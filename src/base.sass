@@ -1,0 +1,74 @@
+$white : #fff;
+$height : 'height';
+$screenWidth : 100%;
+
+.nav 
+	color: $white;
+	a 
+		background-color: #fff;
+
+.header
+	position: absolute;
+	top: (40px/20);
+	width: $screenWidth;
+	#{$height}: 100px;
+
+.sum
+	height: 1px + 1px;
+
+.substraction
+	height: 1px - 2px;
+
+.multiplication
+	width: 2px * 3;
+
+.division
+	width: $screenWidth / 2;
+	height: round(1.5px) / 2;
+	margin: (4px/2);
+	padding: 1px + 4px / 2;
+
+	font: 18px/40px;
+
+p
+	curson: e + -resize;
+	margin: 10px + 10px auto;
+
+p:before
+	content: 'hello ' + world;
+	font-family: sans + '-serif';
+
+$navsSelector : footer;
+$bgColor : background-color;
+
+p.#{$navsSelector}
+	#{$bgColor}: #fff;
+
+.detail
+	$font-size: 18px;
+	$line-height: 40px;
+	font: #{$font-size}/#{$line-height};
+
+.content
+	@import "main"
+
+.divFather 
+	font-size: 16px;
+	height: 10px;
+	@media (max-width:320)
+		font-size: 14px;
+
+.divMother
+	width: 30px;
+
+.divSon 
+	@extend .divFather;
+	width: 10px;
+
+.divGrandSon
+	@extend .divMother;
+	@extend .divSon;
+
+
+
+
